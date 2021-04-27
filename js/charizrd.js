@@ -75,3 +75,39 @@ let charizard = {
   }
 
 let charizrd = document.getElementById('charizrd');
+
+let nameElement = document.createElement("h1");//creates h1
+let name = document.createTextNode(charizard.name);//creates name for h1
+nameElement.appendChild(name);//puts name in h1
+charizrd.appendChild(nameElement);//puts h1 in charizrd div
+
+let abilitiesList = document.createElement("ul");
+charizrd.appendChild(abilitiesList);
+
+for (item in charizard) {
+  let itemElem = document.createElement("p");
+  let itemValue = document.createTextNode(item + ":");
+  itemElem.appendChild(itemValue);
+  
+  charizrd.appendChild(itemElem);
+
+  let itemUL = document.createElement("ul");
+  itemUL.setAttribute('id',item)
+
+  charizrd.appendChild(itemUL);
+}
+
+for (ability in charizard.abilities) {
+  let abilityUL = document.querySelector('#abilities');
+  let abilityElem = document.createElement("li");
+  let abilityValue = document.createTextNode(charizard.abilities[ability].name);
+  abilityElem.appendChild(abilityValue);
+  abilityUL.appendChild(abilityElem);
+}
+for (stat in charizard.stats) {
+  let abilityUL = document.querySelector('#stats');
+  let abilityElem = document.createElement("li");
+  let abilityValue = document.createTextNode(charizard.stats[stat].base_stat);
+  abilityElem.appendChild(abilityValue);
+  abilityUL.appendChild(abilityElem);
+}
