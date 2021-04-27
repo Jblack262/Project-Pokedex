@@ -1,0 +1,51 @@
+div{
+    background-color:rebeccapurple;
+    color:black;
+    div{
+        background-color:white;
+    }
+}
+header{
+    display:flex;
+    justify-content: space-evenly;
+    background-color:rebeccapurple;
+    font-size:4vw;
+}
+a{
+    text-decoration: none;
+    color:gold;
+    padding:1.5%;
+    font-family:'pokemon';
+}
+a:hover{
+    text-decoration: none;
+    color:red;
+    background-color:black;
+}
+.mainGrid{
+    display:grid;
+    grid-template-columns:33% 33% 33%;
+    grid-template-rows:45% 45% 10%;
+    justify-items:space-evenly;
+    background-color:rebeccapurple;
+    height:40vw;
+
+}
+.pokeWindow{
+    width:60%;
+    height:140%;
+    grid-column:2/3;
+    grid-row:1/2;
+    justify-self:center;
+    border:6px red solid;
+}
+.charizrdPic{
+    width:90%;
+}
+.textBox{
+    justify-self:center;
+    align-self:center;
+    grid-column:2/3;
+    grid-row:2/3;
+    width:60%;
+}
