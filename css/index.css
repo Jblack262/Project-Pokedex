@@ -16,6 +16,7 @@ header {
           justify-content: space-evenly;
   background-color: rebeccapurple;
   font-size: 4vw;
+  border-bottom: purple 4px solid;
 }
 
 a {
@@ -29,6 +30,7 @@ a:hover {
   text-decoration: none;
   color: red;
   background-color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .mainGrid {
@@ -45,7 +47,7 @@ a:hover {
 
 .pokeWindow {
   width: 60%;
-  height: 140%;
+  height: 110%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -54,7 +56,18 @@ a:hover {
   grid-row: 1/2;
   -ms-grid-column-align: center;
       justify-self: center;
-  border: 6px red solid;
+  border: 6px gold solid;
+  background-image: url(../images/charizrd.png);
+  background-size: 100%;
+  margin-top: 5%;
+}
+
+.pokeWindow:hover {
+  background-image: url(../images/megacharizrd.jpg);
+  padding-right: 10%;
+  background-size: cover;
+  border: 6px black solid;
+  background-color: red;
 }
 
 .charizrdPic {
@@ -64,6 +77,9 @@ a:hover {
 .textBox {
   -ms-grid-column-align: center;
       justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -74,5 +90,31 @@ a:hover {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   width: 60%;
+  padding: 2.5%;
+  margin-top: 5%;
+  background-color: rebeccapurple;
+  border: 2px purple solid;
+  color: gold;
+  font-size: 90%;
+}
+
+.textBox:hover {
+  color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: black;
+}
+
+p {
+  color: thistle;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
+
+h1 {
+  color: goldenrod;
+}
+
+li {
+  color: gold;
 }
 /*# sourceMappingURL=index.css.map */

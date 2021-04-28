@@ -10,6 +10,7 @@ header{
     justify-content: space-evenly;
     background-color:rebeccapurple;
     font-size:4vw;
+    border-bottom: purple 4px solid;
 }
 a{
     text-decoration: none;
@@ -21,6 +22,7 @@ a:hover{
     text-decoration: none;
     color:red;
     background-color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .mainGrid{
     display:grid;
@@ -33,19 +35,52 @@ a:hover{
 }
 .pokeWindow{
     width:60%;
-    height:140%;
+    height:110%;
     grid-column:2/3;
     grid-row:1/2;
     justify-self:center;
-    border:6px red solid;
+    border:6px gold solid;
+    background-image: url(../images/charizrd.png);
+    background-size: 100%;
+    margin-top:5%;
+}
+.pokeWindow:hover{
+    background-image: url(../images/megacharizrd.jpg);
+    padding-right:10%;
+    background-size: cover;
+    border:6px black solid;
+    background-color:red;
 }
 .charizrdPic{
     width:90%;
 }
 .textBox{
     justify-self:center;
+    justify-content:center;
     align-self:center;
     grid-column:2/3;
     grid-row:2/3;
     width:60%;
+    padding:2.5%;
+    margin-top:5%;
+    background-color:rebeccapurple;
+    border: 2px purple solid;
+    color:gold;
+    font-size:90%;
+}
+.textBox:hover{
+    color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:black;
+}
+p{
+    color:thistle;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+h1{
+    color:goldenrod;
+}
+li{
+    color: gold;
 }
