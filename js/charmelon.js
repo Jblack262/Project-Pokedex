@@ -1,4 +1,4 @@
-let charmelon = {
+let charmeleon = {
     "abilities": [
       {
         "name": "blaze"
@@ -67,3 +67,40 @@ let charmelon = {
     ],
     "weight": 190
   }
+  let charmelon = document.getElementById('charmelon');
+
+let nameElement = document.createElement("h1");//creates h1
+let name = document.createTextNode(charmeleon.name);//creates name for h1
+nameElement.appendChild(name);//puts name in h1
+charmelon.appendChild(nameElement);//puts h1 in charmelon div
+
+let abilitiesList = document.createElement("ul");
+charmelon.appendChild(abilitiesList);
+
+for (item in charmeleon) {
+  let itemElem = document.createElement("p");
+  let itemValue = document.createTextNode(item + ":");
+  itemElem.appendChild(itemValue);
+  
+  charmelon.appendChild(itemElem);
+
+  let itemUL = document.createElement("ul");
+  itemUL.setAttribute('id',item)
+
+  charmelon.appendChild(itemUL);
+}
+
+for (ability in charmeleon.abilities) {
+  let abilityUL = document.querySelector('#abilities');
+  let abilityElem = document.createElement("li");
+  let abilityValue = document.createTextNode(charmeleon.abilities[ability].name);
+  abilityElem.appendChild(abilityValue);
+  abilityUL.appendChild(abilityElem);
+}
+for (stat in charmeleon.stats) {
+  let abilityUL = document.querySelector('#stats');
+  let abilityElem = document.createElement("li");
+  let abilityValue = document.createTextNode(charmeleon.stats[stat].base_stat);
+  abilityElem.appendChild(abilityValue);
+  abilityUL.appendChild(abilityElem);
+}

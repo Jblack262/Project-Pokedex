@@ -1,4 +1,4 @@
-let charizard = {
+let charmeleon = {
     "abilities": [
       {
         "name": "blaze"
@@ -74,40 +74,40 @@ let charizard = {
     "weight": 905
   }
 
-let charizrd = document.getElementById('charizrd');
+let charmelon = document.getElementById('charizrd');
 
 let nameElement = document.createElement("h1");//creates h1
-let name = document.createTextNode(charizard.name);//creates name for h1
+let name = document.createTextNode(charmeleon.name);//creates name for h1
 nameElement.appendChild(name);//puts name in h1
-charizrd.appendChild(nameElement);//puts h1 in charizrd div
+charmelon.appendChild(nameElement);//puts h1 in charizrd div
 
 let abilitiesList = document.createElement("ul");
-charizrd.appendChild(abilitiesList);
+charmelon.appendChild(abilitiesList);
 
-for (item in charizard) {
+for (item in charmeleon) {
   let itemElem = document.createElement("p");
   let itemValue = document.createTextNode(item + ":");
   itemElem.appendChild(itemValue);
   
-  charizrd.appendChild(itemElem);
+  charmelon.appendChild(itemElem);
 
   let itemUL = document.createElement("ul");
   itemUL.setAttribute('id',item)
 
-  charizrd.appendChild(itemUL);
+  charmelon.appendChild(itemUL);
 }
 
-for (ability in charizard.abilities) {
+for (ability in charmeleon.abilities) {
   let abilityUL = document.querySelector('#abilities');
   let abilityElem = document.createElement("li");
-  let abilityValue = document.createTextNode(charizard.abilities[ability].name);
+  let abilityValue = document.createTextNode(charmeleon.abilities[ability].name);
   abilityElem.appendChild(abilityValue);
   abilityUL.appendChild(abilityElem);
 }
-for (stat in charizard.stats) {
+for (stat in charmeleon.stats) {
   let abilityUL = document.querySelector('#stats');
   let abilityElem = document.createElement("li");
-  let abilityValue = document.createTextNode(charizard.stats[stat].base_stat);
+  let abilityValue = document.createTextNode(charmeleon.stats[stat].base_stat);
   abilityElem.appendChild(abilityValue);
   abilityUL.appendChild(abilityElem);
 }
